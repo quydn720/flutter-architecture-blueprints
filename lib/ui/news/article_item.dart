@@ -4,7 +4,6 @@ import 'package:app/ui/hook/use_l10n.dart';
 import 'package:app/ui/hook/use_router.dart';
 import 'package:app/ui/route/app_route.dart';
 import 'package:app/ui/theme/app_theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

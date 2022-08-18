@@ -36,6 +36,7 @@ class UserViewModel extends ChangeNotifier {
         success: (_) {
           _user = null;
           notifyListeners();
+          return;
         },
         failure: (_) => result,
       );

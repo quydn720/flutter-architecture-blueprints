@@ -19,13 +19,13 @@ class DetailPage extends HookWidget {
     final router = useRouter();
     return Scaffold(
       body: GestureDetector(
+        onTap: router.pop,
         child: Center(
           child: Hero(
             tag: article!,
             child: networkImage(article?.urlToImage),
           ),
         ),
-        onTap: router.pop,
       ),
     );
   }
