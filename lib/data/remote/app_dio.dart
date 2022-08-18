@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:dio_firebase_performance/dio_firebase_performance.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:ua_client_hints/ua_client_hints.dart';
 
 final dioProvider = Provider((_) => AppDio.getInstance());
@@ -30,7 +31,7 @@ class AppDio with DioMixin implements Dio {
 
     if (kDebugMode) {
       // Local Log
-      interceptors.add(LogInterceptor(responseBody: true, requestBody: true));
+      interceptors.add(PrettyDioLogger(responseBody: true, requestBody: true));
     }
 
     httpClientAdapter = DefaultHttpClientAdapter();
